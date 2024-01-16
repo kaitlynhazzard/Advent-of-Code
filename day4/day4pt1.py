@@ -11,10 +11,7 @@ with open(file_path, 'r') as file:
     # iterate over each card
     for line in file:
         card_points = 0
-        # get only the number info on the card
-        numbers = line.split(':')[1].split('|')
-        winning_nums = numbers[0]
-        your_nums = numbers[1]
+        winning_nums, your_nums = line.split(':')[1].split('|')
 
         # turn winning numbers and your numbers into list
         winning_nums = format_numbers(winning_nums)
